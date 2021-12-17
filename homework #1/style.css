@@ -1,0 +1,65 @@
+body {
+  background-image: linear-gradient(to bottom, white, gray);
+  color: white;
+  text-shadow: 2px 2px 2px black;
+  font-family:"Courier", 'Courier New', Courier, monospace;
+}
+
+#image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 0%;
+  transition-delay: 1s;
+  -webkit-transition: width 2s ease-out;
+  -moz-transition: width 2s ease-out;
+  -o-transition: width 2s ease-out;
+  transition: width 2s ease-out;
+}
+
+#image:hover {
+  width: 75%;
+  transition-duration: 3s ease-out;
+}
+
+#image2 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+  padding: 1px;
+  animation: skew 3s infinite;
+  transform: skew(20deg);
+  animation-direction: alternate;
+  opacity: .7;
+}
+
+@keyframes skew {
+  0% {
+    transform: skewX(20deg);
+  }
+  100% {
+    transform: skewX(-20deg);
+  }
+}
+
+#calculator {
+  display: grid;
+  grid-template-rows: auto auto auto auto;
+  grid-template-columns: 100px auto ;
+  column-gap: 10px;
+  row-gap: 20px;
+  padding: 10px;
+  border: 5px solid gray;
+}
+
+h1 {
+  grid-column: 1 / span 2;
+  text-align: center;
+  background-color:black;
+  color: white;
+  margin: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: auto;
+}
